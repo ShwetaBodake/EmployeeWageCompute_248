@@ -9,13 +9,15 @@
             const int isPartTime = 2;
             const int EMPWagePerHr = 20;
             int DaysInMonth = 20;
-            int EmpHours = 8;
+            int EmpHours = 0;
             int DailyWage = 0;
             int TotalWage = 0;
+            int totalhrs = 0;
             int day = 1;
+            int MaxHours = 100;
             //UC1-EmployeeAttendance
             Random random = new Random();
-            for (day = 1; day <= DaysInMonth; day++)
+          while(day<= DaysInMonth && EmpHours<= MaxHours)
             {
                 int EmpAttendance = random.Next(0, 3);
 
@@ -37,10 +39,15 @@
 
 
                 DailyWage = EmpHours * EMPWagePerHr;
-                Console.WriteLine("Daily Wage Of Employee is {0}", DailyWage);
+                Console.WriteLine("Daily Wage Of Employee is {0} at day{1}", DailyWage,day);
                 //TotalWageOfMonth = TotalWageOfMonth + DailyWage;
                 TotalWage+= DailyWage;
                 Console.WriteLine("Monthly Wage of Employee is {0}", TotalWage);
+                day++;
+                totalhrs += EmpHours;
+                Console.WriteLine(totalhrs);
+               // EmpHours++;
+
                 //Console.ReadLine();
             }
         }
