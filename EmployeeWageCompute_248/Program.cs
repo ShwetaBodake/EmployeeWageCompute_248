@@ -6,18 +6,24 @@
         {
             Console.WriteLine("Welcome To Employee Wage Computation Program");
             int isPresent = 1;
+            int isPartTime = 2;
             int EMPWagePerHr = 20;
             int EmpHours = 8;
             int DailyWage = 0;
             //UC1-EmployeeAttendance
             Random random = new Random();
-            int EmpAttendance = random.Next(0, 2);
+            int EmpAttendance = random.Next(0, 3);
             if (EmpAttendance == isPresent)
             {
                 Console.WriteLine("Employee is Present");
                 EmpHours = 8;
             }
-            else
+            else if(EmpAttendance== isPartTime)
+            {
+                Console.WriteLine("Employee is Part time Present");
+                EmpHours = 4;
+            }
+            else 
             {
                 Console.WriteLine("Employee is Absent");
                 EmpHours = 0;
