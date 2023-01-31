@@ -4,6 +4,10 @@
     {
         public static void Main(string[] args)
         {
+            ComputeWage();
+        }
+        public static void ComputeWage()
+        {
             Console.WriteLine("Welcome To Employee Wage Computation Program");
             const int isPresent = 1;
             const int isPartTime = 2;
@@ -15,9 +19,9 @@
             int totalhrs = 0;
             int day = 1;
             int MaxHours = 100;
-            //UC1-EmployeeAttendance
+       
             Random random = new Random();
-          while(day<= DaysInMonth && EmpHours<= MaxHours)
+            while (day <= DaysInMonth && EmpHours <= MaxHours)
             {
                 int EmpAttendance = random.Next(0, 3);
 
@@ -39,18 +43,21 @@
 
 
                 DailyWage = EmpHours * EMPWagePerHr;
-                Console.WriteLine("Daily Wage Of Employee is {0} at day{1}", DailyWage,day);
+                Console.WriteLine("Daily Wage Of Employee is {0} at day{1}", DailyWage, day);
                 //TotalWageOfMonth = TotalWageOfMonth + DailyWage;
-                TotalWage+= DailyWage;
+                TotalWage += DailyWage;
                 Console.WriteLine("Monthly Wage of Employee is {0}", TotalWage);
                 day++;
                 totalhrs += EmpHours;
                 Console.WriteLine(totalhrs);
-               // EmpHours++;
+                // EmpHours++;
 
                 //Console.ReadLine();
-            }
+            
         }
+
+
+    }
     }
 }
 
