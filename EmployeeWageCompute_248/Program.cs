@@ -1,8 +1,8 @@
 ﻿namespace EmployeeWageCompute_248
 {
-    class EmpWageBuilder
+   /* class EmpWageBuilder
     {
-         public const int isPresent = 1;
+        public const int isPresent = 1;
         public const int isPartTime = 2;
         public string company;
         public int EMPWagePerHr, DaysInMonth, MaxHours;
@@ -81,6 +81,6 @@
              
 
         }
-    }
+    }*/
 }
 
